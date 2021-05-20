@@ -3,8 +3,9 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     firstName: { type: String, required: true },
-    lastName: { type: String, required: true },
-    email: { type: String, required: true }
+    lastName: String,
+    email: { type: String, required: true },
+    googleId: String
 }, {
     timestamps: true,
     }
