@@ -1,9 +1,16 @@
 <%-include("./partials/header.ejs") %>
 <h1>Who am I watching a movie with?</h1>
-<ul>
 
-</ul>
-<input></input>
-<input type="submit" value="add">
+
+
+<form action='/users' method='POST'>
+    <label>Friends:
+        <input type="text" placeholder="Add a friend to your watchlist here">
+    </label><br>
+<input type="submit" value="Add">
+</form>
+
+
+
 
 <%-include("./partials/footer.ejs") %>

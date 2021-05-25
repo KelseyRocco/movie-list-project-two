@@ -9,5 +9,11 @@ function index(req, res, next) {
     };
 
 
+    // function addFriend(req, res, next) {
+    //     req.user.friends.push(req.body);
+    //     req.user.save(function(err) {
+    //         res.redirect('/users');
+    //     });
+    // }
 
     
