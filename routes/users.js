@@ -12,12 +12,15 @@ router.get('/users', function(req, res, next) {
   )})
 });
 
+
 router.get('/friends/index', friendsCtrl.index);
 
 router.get('/friends/new', friendsCtrl.new)
 
-router.get('/:id', friendsCtrl.show)
+router.get('/friends/:id', friendsCtrl.show)
 
 router.post('/users', friendsCtrl.create);
+
+router.delete('/friends/:id', friendsCtrl.delFriend);
 
 module.exports = router;
