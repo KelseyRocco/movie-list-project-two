@@ -6,6 +6,8 @@ var session = require('express-session');
 var passport = require('passport');
 var logger = require('morgan');
 
+const Friend = require('./models/friend')
+
 //  laod environment variables (dotenv)
 require('dotenv').config();
 
