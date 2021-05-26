@@ -1,0 +1,16 @@
+<%-include("../partials/header.ejs") %>
+
+<h1>Who am I watching a movie with?</h1>
+
+        <% friends.forEach(function(f){ %>
+        <ul>
+            <a href="/friends/<%= f._id %>">
+            <li><%= f.firstName %></li>
+            <li><%= f.lastName %></li>
+            </a>
+        </ul>
+        <% }); %>
+
+
+
+<%-include("../partials/footer.ejs") %>

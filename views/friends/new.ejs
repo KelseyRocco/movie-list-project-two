@@ -1,0 +1,26 @@
+<%-include("../partials/header.ejs") %>
+
+
+<h2>Enter a New Friend</h2>
+<form action="/users" method="POST">
+    <label>First Name:
+        <input type="text" name="firstName">
+    </label><br>
+    <label>Last Name:
+        <input type="text" name="lastName">
+    </label><br>
+
+    <!-- <label>Favourite Genre:
+        <select name="favGenre">
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Comdey">Comedy</option>
+            <option value="Horror">Horror</option>
+        </select>
+    </label><br> -->
+
+    <input type="submit" value="Add Friend">
+</form>
+
+
+<%-include("../partials/footer.ejs") %>
