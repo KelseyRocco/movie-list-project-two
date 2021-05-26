@@ -21,6 +21,6 @@ router.get('/friends/:id', friendsCtrl.show)
 
 router.post('/users', friendsCtrl.create);
 
-router.delete('/friends/:id', friendsCtrl.delFriend);
+// router.delete('/friends/:id', friendsCtrl.delFriend);
 
 module.exports = router;
