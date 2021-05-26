@@ -7,11 +7,13 @@ var passport = require('passport');
 var logger = require('morgan');
 
 const Friend = require('./models/friend')
+const Movie = require('./models/movie')
 
 //  laod environment variables (dotenv)
 require('dotenv').config();
 
 var indexRouter = require('./routes/index');
+var moviesRouter = require('./routes/movies');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -43,6 +45,7 @@ app.use(function (req, res, next) {
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/movies', moviesRouter);
 app.use('/', usersRouter);
 
 // catch 404 and forward to error handler

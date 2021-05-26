@@ -5,9 +5,15 @@
         <% friends.forEach(function(f){ %>
         <ul>
             <a href="/friends/<%= f._id %>">
-            <li><%= f.firstName %></li>
-            <li><%= f.lastName %></li>
+            <li><%= f.firstName %> <%= f.lastName %></li>
+        
+            <form action="<= f._id %>?_method=DELETE" method="POST">
+                <button type="submit">Bye</button>
+            </form>
+
             </a>
+            
+
         </ul>
         <% }); %>
 
