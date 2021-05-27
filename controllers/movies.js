@@ -11,7 +11,7 @@ function index(req, res) {
         if (err) {
             return console.log(err);
         }
-        res.render('/friends/movies/index', {movies});
+        res.render('./movies/index', {movies});
     });
 }
 
