@@ -11,7 +11,7 @@ function index(req, res) {
         if (err) {
             return console.log(err);
         }
-        res.render('/friends/:id', {movies});
+        res.render('/friends/movies/index', {movies});
     });
 }
 
@@ -20,13 +20,13 @@ function create(req, res) {
     movie.save(function(err){
         if(err) return res.render('movies/new');
         console.log(movie);
-        res.redicrect('/movies')
+        res.redirect('/movies/index')
     })
 }
 
 function show(req, res) {
-    Movie.findById(req.params.id, function(err, friend) {
-        res.render('friends/:id', { title: 'Movie', movie });
+    Movie.findById(req.params.id, function(err, movie) {
+        res.render('movies/index', { title: 'Movie', movie });
     });
 }
 
