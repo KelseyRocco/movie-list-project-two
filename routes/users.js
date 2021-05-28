@@ -13,13 +13,20 @@ router.get('/users', function(req, res, next) {
 });
 
 
-router.get('/friends/index', friendsCtrl.index);
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated()) return next();
+  res.redirect('/auth/google');
+}
 
-router.get('/friends/new', friendsCtrl.new)
+router.get('/friends/index', isLoggedIn, friendsCtrl.index);
 
-router.get('/friends/:id', friendsCtrl.show)
+router.get('/friends/new', isLoggedIn,  friendsCtrl.new)
 
-router.post('/users', friendsCtrl.create);
+router.get('/friends/:id', isLoggedIn,  friendsCtrl.show)
+
+router.post('/users', isLoggedIn, friendsCtrl.create);
+
+// router.delete('/friends/:id', isLoggedIn, friendsCtrl.delete);
 
 // router.delete('/friends/:id', friendsCtrl.delFriend);
 
