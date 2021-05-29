@@ -32,23 +32,9 @@ function create(req, res) {
 }
 
 
-
-// function deleteFriend(req, res) {
-//     Friend.findOne({'friends._id':req.params.id}, function(err, friend){
-//         friend.friends.id(req.params.id).remove();
-//         friend.save(function(err){
-//             res.redirect('/friends/index')
-//         });
-//     });
-// }
-
-
-
-
 module.exports = {
     new: newFriend,
     index,
     create,
     show,
-    // deleteFriend
 };

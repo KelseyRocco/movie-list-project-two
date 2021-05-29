@@ -1,0 +1,49 @@
+<%-include("../partials/header.ejs") %>
+
+<section id="show-page">
+    <div>Title: </div>
+    <div><%= movie.title %></div>
+    <div>Rotten Tomatoes Rating: </div>
+    <div><%= movie.rottenTomatoes %><p style="display: inline"> %</p></div>
+  </section>
+
+  <% if (movie.comment.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Comments</th>
+          <th>Have I seen this</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% movie.comment.forEach(function(c) { %>
+          <tr>
+            <td><%= c.content %></td>
+            <td>
+              <input type="radio" name="view">Yes</input>
+              <input type="radio" name="view">No</input>
+            <td>
+              <!-- <form id="delete-comment-form" action="/movies/<%= movie._id%>?_method=DELETE" method="POST"> -->
+                
+                <button type="submit"> DELETE </button>
+                <button type="submit">EDIT</button>
+              <!-- </form> -->
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } %>
+
+
+  <br><br><h2>Comments</h2>
+<form id="add-comment-form" method="POST" action="/movies/<%= movie._id %>/comments">
+    <label>Comment:</label>
+    <textarea name="content"></textarea>
+      </select>
+    <input type="submit" value="Add Comment">
+</form>
+
+
+<%-include("../partials/footer.ejs") %>

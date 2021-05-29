@@ -6,18 +6,21 @@
     <table>
         <thead>
         <tr>
+            <th></th>
             <th>Title</th>
             <th>Rotten Tomatoes Score</th>
+            <th></th>
     
         </tr>
         </thead>
         <tbody>
             <% movies.forEach(function(m){ %>
             <tr>
+            <td><form action="/movies/<%= m._id %>?_method=DELETE" method="POST" id="delete-form">
+                <button type="submit" class="input-button" id="delete-button">delete</button></td>
             <td><%= m.title %></td>
             <td><%= m.rottenTomatoes %></td>
-            <td><a href="/movies/<%= m._id %>">comments</a></td>
-          
+            <td><a href="/movies/<%= m._id %>">Comments</a></td>
         <% }); %>
 
 

@@ -26,10 +26,18 @@ function create(req, res) {
 
 function show(req, res) {
     Movie.findById(req.params.id, function(err, movie) {
-        res.render('movies/index', { title: 'Movie', movie });
+        res.render('movies/show', { title: 'Movie Detail', movie });
     });
 }
 
+// // function deleteComment(req, res, next) {
+// //     Movie.findOne({'movie._id': req.params.id}, function(err, movie) {
+// //         movie.comment.id(req.params.id).remove();
+// //         movie.save(function(err) {
+// //         res.redirect('/movies');
+// //         });
+// //     });
+// }
 
 module.exports = {
     new: newMovie,

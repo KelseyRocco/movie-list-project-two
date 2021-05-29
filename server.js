@@ -15,6 +15,7 @@ require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var moviesRouter = require('./routes/movies');
+const commentsRouter = require('./routes/comments');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -48,6 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/movies', moviesRouter);
+app.use('/', commentsRouter);
 app.use('/', usersRouter);
 
 // catch 404 and forward to error handler
