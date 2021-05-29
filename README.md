@@ -42,5 +42,5 @@ ERD
 2. Fix bugs (delete movie, sign in and only see your own friends instead of everyones)
 3. Add a working delete button to friends
 4. Be able to log in to friends accounts and edit their entries
-5. Make is look better
+5. Make it look better
 
