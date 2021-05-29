@@ -29,7 +29,6 @@ function create(req, res) {
     })
 }
 
-
 // function delFriend(req, res, next) {
 //         friend.index.id(req.params.id).remove();
 //         friend.save(function(err) {
@@ -42,4 +41,5 @@ module.exports = {
     index,
     create,
     show
+    // delFriend
 };
