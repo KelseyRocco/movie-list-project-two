@@ -26,6 +26,4 @@ router.get('/friends/:id', isLoggedIn,  friendsCtrl.show)
 
 router.post('/users', isLoggedIn, friendsCtrl.create);
 
-// router.delete('/friends/:id', isLoggedIn, friendsCtrl.deleteFriend);
-
 module.exports = router;

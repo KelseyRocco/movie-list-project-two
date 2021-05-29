@@ -1,10 +1,14 @@
-var express = require('express');
-var router = express.Router();
-var commentsCtrl = require('../controllers/comments');
+  
+const express = require('express');
+const router = express.Router();
+const commentsCtrl = require('../controllers/comments');
 
-router.post('/movies/:id/comments', commentsCtrl.create);
 
-// router.delete('/movies/:id/comments', commentsCtrl.delete);
+router.get('/show', commentsCtrl.new);
 
+router.get('/index', commentsCtrl.show)
+
+
+// router.post('/movies/:id/comments', commentsCtrl.create)
 
 module.exports = router;

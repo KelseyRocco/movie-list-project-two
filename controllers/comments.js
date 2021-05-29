@@ -1,25 +1,28 @@
 const Movie = require('../models/movie');
 
-function create(req, res) {
-    Movie.findById(req.params.id, function(err, movie){
-        movie.comment.push(req.body);
-        movie.save(function(err){
-            res.redirect(`movie/${movie._id}`);
-        });
-    });
-}
-
-// function deleteComment(req, res, next) {
-//     Movie.findOne({'movie._id': req.params.id}, function(err, movie) {
-//         movie.comment.id(req.params.id).remove();
-//         movie.save(function(err) {
-//         res.redirect('/movies');
+// function create(req, res) {
+//     Movie.findById(req.params.id, function(err, movie){
+//         movie.comments.push(req.body);
+//         movie.save(function(err){
+//             res.redirect(`/movies/${movie._id}`);
 //         });
 //     });
 // }
 
+function newComment(req, res) {
+    res.render('movies/show');
+}
+
+function show(req, res) {
+    Movie.findById(req.params.id, function(err, movie) {
+        res.render('movies/:id', { title: 'Movie', movie });
+    });
+}
+
+
 
 module.exports = {
-    create,
-    // delete: deleteComment
-};
+    new: newComment,
+    show
+    // create
+}

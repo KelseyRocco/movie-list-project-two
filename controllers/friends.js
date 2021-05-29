@@ -31,10 +31,9 @@ function create(req, res) {
     })
 }
 
-
 module.exports = {
     new: newFriend,
     index,
     create,
-    show,
+    show
 };

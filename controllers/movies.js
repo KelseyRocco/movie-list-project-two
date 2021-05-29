@@ -30,19 +30,21 @@ function show(req, res) {
     });
 }
 
-// // function deleteComment(req, res, next) {
-// //     Movie.findOne({'movie._id': req.params.id}, function(err, movie) {
-// //         movie.comment.id(req.params.id).remove();
-// //         movie.save(function(err) {
-// //         res.redirect('/movies');
-// //         });
-// //     });
-// }
+function deleteMovie(req, res, next) {
+    Movie.findByIdAndDelete(req.params.id, function(err, movie) {
+        if(err){
+            console.log(err)
+        }
+        res.redirect('/movies/index');
+        })
+    };
+
 
 module.exports = {
     new: newMovie,
     create,
     index,
     show,
+    delete: deleteMovie
 }
 
