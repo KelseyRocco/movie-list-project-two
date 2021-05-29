@@ -29,17 +29,17 @@ function create(req, res) {
     })
 }
 
-
-// function delFriend(req, res, next) {
-//         friend.index.id(req.params.id).remove();
-//         friend.save(function(err) {
-//             res.redirect('/index');
-//         });
-// };
+function deleteFriend(req, res, next) {
+        friend.index.id(req.params.id).remove();
+        friend.save(function(err) {
+            res.redirect('/friends/index');
+        });
+};
 
 module.exports = {
     new: newFriend,
     index,
     create,
-    show
+    show,
+    delete: deleteFriend
 };
