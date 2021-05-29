@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+    <div>Title: </div>
+    <div><%= movie.title %></div>
+    <div>Rotten Tomatoes Score: </div>
+    <div><%= movie.rottenTomatoes %></div>
+</section>
+
+<!-- <br><br><h2>Reviews</h2>
+<form id="add-review-form" method="POST"
+    action="/movies/<%= movie._id %>/reviews">
+    <label>Review:</label>
+    <textarea name="content"></textarea>
+    
+    <input type="submit" value="Add Review">
+</form>
+
+<% if (movie.reviews.length) { %>
+    <table>
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Review</th>
+            <th>Rating</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% movie.comments.forEach(function(r) { %>
+            <tr>
+            <td><%= r.comment %></td>
+            </tr>
+        <% }); %>
+        </tbody>
+    </table>
+    <% } else { %>
+    <h5>No Comments Yet</h5>
+<% } %> -->
+
+
+<%- include('../partials/footer') %>
