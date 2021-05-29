@@ -10,5 +10,7 @@ router.get('/index', moviesCtrl.index);
 router.get('/index', moviesCtrl.show)
 
 router.post('/', moviesCtrl.create);
+
+
 	
 module.exports = router;

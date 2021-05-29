@@ -30,11 +30,11 @@ function show(req, res) {
     });
 }
 
+
 module.exports = {
     new: newMovie,
     create,
     index,
-    show
-
+    show,
 }
 

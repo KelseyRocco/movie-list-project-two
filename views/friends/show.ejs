@@ -2,12 +2,8 @@
 <h1> Movie Night With <%= friend.firstName %>: </h1>
 
 <div class="cater3-movingBG" style="height:500px">
-<a href="/movies/new">Add Movie</a>
-<a href="/movies/index">See All Movies</a>
+        <a href="/movies/new">Add Movie</a><br>
+        <a href="/movies/index">See All Movies</a>
 </div>
 
-<form action="/friends/<%= friend._id %>?_method=DELETE" method="POST">
-    <button type="submit">BYE</button> 
-    </form>
-</a>
 <%-include("../partials/footer.ejs") %>

@@ -8,6 +8,10 @@
             <a href="/friends/<%= f._id %>">
             <li><%= f.firstName %> <%= f.lastName %></li>
             
+            <form action="/friends/<%= f._id %>?_method=DELETE" method="POST">
+                <button type="submit">BYE</button> 
+                </form>
+            </a>
 
         </ul>
         <% }); %>

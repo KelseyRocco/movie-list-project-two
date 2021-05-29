@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
 var logger = require('morgan');
+var methodOverride = require('method-override');
 
 const Friend = require('./models/friend')
 const Movie = require('./models/movie')
@@ -27,6 +28,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // app.use(logger('dev'));
+app.use(methodOverride('_method'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

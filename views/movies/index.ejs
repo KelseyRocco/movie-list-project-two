@@ -16,8 +16,12 @@
             <tr>
             <td><%= m.title %></td>
             <td><%= m.rottenTomatoes %></td>
+            <td><a href="/movies/<%= m._id %>">comments</a></td>
           
         <% }); %>
+
+
+        <a href="/movies/new">Add Movie</a>
 
 
 
