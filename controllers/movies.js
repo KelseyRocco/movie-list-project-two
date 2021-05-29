@@ -26,7 +26,11 @@ function create(req, res) {
 
 function show(req, res) {
     Movie.findById(req.params.id, function(err, movie) {
+<<<<<<< HEAD
         res.render('movies/show', { title: 'Movie Detail', movie });
+=======
+        res.render('movies/show', { title: 'Movie', movie });
+>>>>>>> 62c3ddd555a25bbc31f94c05f7dbcc075ce0fffb
     });
 }
 

@@ -31,9 +31,20 @@ function create(req, res) {
     })
 }
 
+<<<<<<< HEAD
+=======
+// function delFriend(req, res, next) {
+//         friend.index.id(req.params.id).remove();
+//         friend.save(function(err) {
+//             res.redirect('/index');
+//         });
+// };
+
+>>>>>>> 62c3ddd555a25bbc31f94c05f7dbcc075ce0fffb
 module.exports = {
     new: newFriend,
     index,
     create,
     show
+    // delFriend
 };

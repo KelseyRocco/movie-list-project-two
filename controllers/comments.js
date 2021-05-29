@@ -15,7 +15,11 @@ function newComment(req, res) {
 
 function show(req, res) {
     Movie.findById(req.params.id, function(err, movie) {
+<<<<<<< HEAD
         res.render('movies/:id', { title: 'Movie', movie });
+=======
+        res.render('movies/show', { title: 'Movie', movie });
+>>>>>>> 62c3ddd555a25bbc31f94c05f7dbcc075ce0fffb
     });
 }
 
@@ -24,5 +28,8 @@ function show(req, res) {
 module.exports = {
     new: newComment,
     show
+<<<<<<< HEAD
     // create
+=======
+>>>>>>> 62c3ddd555a25bbc31f94c05f7dbcc075ce0fffb
 }

@@ -19,8 +19,13 @@
             <td><form action="/movies/<%= m._id %>?_method=DELETE" method="POST" id="delete-form">
                 <button type="submit" class="input-button" id="delete-button">delete</button></td>
             <td><%= m.title %></td>
+<<<<<<< HEAD
             <td><%= m.rottenTomatoes %></td>
             <td><a href="/movies/<%= m._id %>">Comments</a></td>
+=======
+            <td><%= m.rottenTomatoes %></td>   
+            <td><a href="/movies/<%= m._id %>">Comments</a></td>    
+>>>>>>> 62c3ddd555a25bbc31f94c05f7dbcc075ce0fffb
         <% }); %>
 
 
