@@ -37,4 +37,10 @@ ERD
 - [Trello](https://trello.com/b/icsTZd5v/movie-app)
 ---
 
+## Next Steps
+1. Add a working comment section as well as a way to edit/delete comments
+2. Fix bugs (delete movie, sign in and only see your own friends instead of everyones)
+3. Add a working delete button to friends
+4. Be able to log in to friends accounts and edit their entries
+5. Make is look better
 
